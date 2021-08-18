@@ -46,14 +46,14 @@ class CategoryManager(models.Manager):
 
     CATEGORY_NAME_COUNT_NAME = {
         'Цветы': 'flower__count',
-        'Цветы в горшках': 'flowerInPot__count',
+        'Цветы в горшках': 'flowerinpot__count',
     }
 
     def get_queryset(self):
         return super().get_queryset()
 
     def get_categories_for_left_sidebar(self):
-        models = get_models_for_count('flower', 'flowerInPot')
+        models = get_models_for_count('flower', 'flowerinpot')
         qs = list(self.get_queryset().annotate(*models))
         data = [
             dict(name=c.name, url=c.get_absolute_url(), count=getattr(c, self.CATEGORY_NAME_COUNT_NAME[c.name]))

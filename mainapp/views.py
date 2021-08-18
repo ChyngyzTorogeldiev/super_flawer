@@ -15,7 +15,7 @@ class BaseView(CartMixin, View):
     def get(self, request, *args, **kwargs):
         categories = Category.objects.get_categories_for_left_sidebar()
         products = LatestProducts.objects.get_products_for_main_page(
-            'flower', 'flowerInPot', with_respect_to='flower'
+            'flower', 'flowerinpot', with_respect_to='flower'
         )
         context = {
             'categories': categories,
@@ -29,7 +29,7 @@ class ProductDetailView(CartMixin, CategoryDetailMixin, DetailView):
 
     CT_MODEL_MODEL_CLASS = {
         'flowers': Flower,
-        'flowerInPots': FlowerInPot
+        'flowerinpots': FlowerInPot
     }
 
     def dispatch(self, request, *args, **kwargs):

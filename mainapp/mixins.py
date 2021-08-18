@@ -6,8 +6,8 @@ from .models import Category, Cart, Customer, Flower, FlowerInPot
 class CategoryDetailMixin(SingleObjectMixin):
 
     CATEGORY_SLUG2PRODUCT_MODEL = {
-        'flower': Flower,
-        'flowerInPot': FlowerInPot,
+        'Flowers': Flower,
+        'Flowerinpots': FlowerInPot,
     }
 
     def get_context_data(self, **kwargs):
