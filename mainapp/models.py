@@ -46,7 +46,7 @@ class CategoryManager(models.Manager):
 
     CATEGORY_NAME_COUNT_NAME = {
         'Цветы': 'flower__count',
-        'Цветы в горшках': 'flowerInPot__count'
+        'Цветы в горшках': 'flowerInPot__count',
     }
 
     def get_queryset(self):

@@ -15,7 +15,7 @@ class BaseView(CartMixin, View):
     def get(self, request, *args, **kwargs):
         categories = Category.objects.get_categories_for_left_sidebar()
         products = LatestProducts.objects.get_products_for_main_page(
-            'flover', 'flowerInPot', with_respect_to='flower'
+            'flower', 'flowerInPot', with_respect_to='flower'
         )
         context = {
             'categories': categories,

@@ -7,7 +7,7 @@ class CategoryDetailMixin(SingleObjectMixin):
 
     CATEGORY_SLUG2PRODUCT_MODEL = {
         'flower': Flower,
-        'flowerInPot': FlowerInPot
+        'flowerInPot': FlowerInPot,
     }
 
     def get_context_data(self, **kwargs):

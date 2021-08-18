@@ -21,7 +21,7 @@ TABLE_CONTENT ="""
                """
 
 PRODUCT_SPEC = {
-    'flower': {
+    'Flower': {
         'Страна': 'country',
         'Сорт': 'grade',
         'Аромат': 'scent',
