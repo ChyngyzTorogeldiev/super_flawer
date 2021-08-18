@@ -96,12 +96,10 @@ class Product(models.Model):
 
 class Flower(Product):
 
-    diagonal = models.CharField(max_length=255, verbose_name='Диагональ')
-    display_type = models.CharField(max_length=255, verbose_name='Тип дисплея')
-    processor_freq = models.CharField(max_length=255, verbose_name='Частота процессора')
-    ram = models.CharField(max_length=255, verbose_name='Оперативная память')
-    video = models.CharField(max_length=255, verbose_name='Видеокарта')
-    time_without_charge = models.CharField(max_length=255, verbose_name='Время работы аккумулятора')
+    country = models.CharField(max_length=255, verbose_name='Страна')
+    variety = models.CharField(max_length=255, verbose_name='Сорт')
+    scent = models.CharField(max_length=255, verbose_name='Аромат')
+    history = models.CharField(max_length=255, verbose_name='История')
 
     def __str__(self):
         return "{} : {}".format(self.category.name, self.title)
@@ -112,17 +110,11 @@ class Flower(Product):
 
 class FlowerInPot(Product):
 
-    diagonal = models.CharField(max_length=255, verbose_name='Диагональ')
-    display_type = models.CharField(max_length=255, verbose_name='Тип дисплея')
-    resolution = models.CharField(max_length=255, verbose_name='Разрешение экрана')
-    accum_volume = models.CharField(max_length=255, verbose_name='Объем батареи')
-    ram = models.CharField(max_length=255, verbose_name='Оперативная память')
-    sd = models.BooleanField(default=True, verbose_name='Наличие SD карты')
-    sd_volume_max = models.CharField(
-        max_length=255, null=True, blank=True, verbose_name='Максимальный объем встраивамой памяти'
-    )
-    main_cam_mp = models.CharField(max_length=255, verbose_name='Главная камера')
-    frontal_cam_mp = models.CharField(max_length=255, verbose_name='Фронтальная камера')
+    country = models.CharField(max_length=255, verbose_name='Страна')
+    variety = models.CharField(max_length=255, verbose_name='Сорт')
+    scent = models.CharField(max_length=255, verbose_name='Аромат')
+    history = models.CharField(max_length=255, verbose_name='История')
+    flower_pot = models.CharField(max_length=255, verbose_name='Цветочный горшок')
 
     def __str__(self):
         return "{} : {}".format(self.category.name, self.title)
